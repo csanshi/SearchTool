@@ -1,0 +1,108 @@
+https://www.jianshu.com/p/d771bbc61dab
+https://segmentfault.com/q/1010000009924603
+
+
+<script>
+export default {
+  name: 'SearchBar',
+  data () { // function关键字可以省略
+    return {
+      msg: 'Welcome to Your Vue.js App'
+    }
+  }
+}
+</script>
+
+
+    <div>
+      <div>
+        <h2>Essential Links</h2>
+        <el-button>默认按钮</el-button>
+        <el-button type="primary">主要按钮</el-button>
+        <el-button type="text">文字按钮</el-button>
+      </div>
+
+      <h1>Hello App!</h1>
+      <p>
+        <!-- use router-link component for navigation. -->
+        <!-- specify the link by passing the `to` prop. -->
+        <!-- `<router-link>` will be rendered as an `<a>` tag by default -->
+        <router-link to="/addData">Go to Foo</router-link>
+      </p>
+      <p>
+        <router-link to="/test">Test</router-link>
+      </p>
+      <!-- route outlet -->
+      <!-- component matched by the route will render here -->
+      <router-view></router-view>
+    </div>
+
+
+      <el-button v-on:click="handleGetData">
+        This is a Button.
+      </el-button>
+
+
+在vue中，组件有三种使用方式
+1.全局注册：Vue.component('component-name', props, data, methods, template,...)
+2.局部注册：var app = new Vue(el, data, methods, components:{test: {定义组件}})
+3.单文件：
+  import C1 from 'path1'
+  import C2 from 'path2'
+  var app = new Vue(el, data, methods, components: {C1, C2,...})
+
+在methods中使用data的数据时，需要this指针，否则无效
+
+    <form class="layui-form">
+      <div class="site-title">
+        <fieldset>
+          <legend><a name="brief">新型冠状病毒肺炎<br />确诊患者同行程查询工具<br /><b>v1.3</b><br /><span id="update_at"></span></a></legend>
+        </fieldset>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">日期：</label>
+        <div class="layui-input-block">
+          <input type="text" class="layui-input layui-input-wide" name="t_date" id="t_date" placeholder="例如: 2020-01-01" autocomplete="off">
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">车次：</label>
+        <div class="layui-input-block">
+          <input type="text" class="layui-input layui-input-wide" name="t_no" placeholder="车次或航班，例如：T123 或 AC1111">
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label">地区：</label>
+        <div class="layui-input-block">
+          <input type="text" class="layui-input layui-input-wide" name="t_area" placeholder="可不填，例如：成都 或 四川">
+        </div>
+      </div>
+      <div class="layui-form-item">
+        <label class="layui-form-label"></label>
+        <div class="layui-input-inline">
+          <button class="layui-btn" lay-submit lay-filter="search">查询</button>
+          <button type="reset" class="layui-btn layui-btn-primary" onclick="ResetSearch()">重置</button>
+        </div>
+      </div>
+      <div class="site-title site-tips">
+        &nbsp;&nbsp;&nbsp;&nbsp;* 以上检索选项可以选填任意一项或多项进行检索。 <br />
+        &nbsp;&nbsp;&nbsp;&nbsp;* 以下为与你输入信息相匹配的确诊患者行程数据，请按 “特别提示” 科学应对。
+      </div>
+    </form>
+
+
+{
+        srcOfMessage: '人民日报',
+        url: 'www.baidu.com',
+        date: '2020',
+        trainNumber: 'No. 189, Grove St, Los Angeles',
+        type: 1,
+        startPoint: '埃塞俄比亚',
+        endPoint: '成都',
+        compartment: '1号车厢',
+        description: '描述1',
+        startTime: '2020/02/23',
+        endTime: '2020/02/24',
+        submitTime: '2020/02/28',
+        remark: '备注'
+      }
